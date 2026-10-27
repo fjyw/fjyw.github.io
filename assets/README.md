@@ -1,1 +1,1 @@
-存放CSS、JavaScript和字型等資源
+JS, CSS, 字型 ...檔
