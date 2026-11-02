@@ -15,7 +15,6 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-
 /* header */
 #title {
     display: flex;
@@ -23,6 +22,7 @@ h1, h2, h3 {
     align-items: center;
     padding: 20px;
     background-color: #FFF9F2;
+    border-bottom: #684F3D 1px solid;
 }
 
 #title > div {
@@ -55,12 +55,13 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 90px;
-    background-color: #E8D8C5;
+    gap: 40px;
+    padding: 40px 10%;
+    background-color: transparent;
 }
 
 .home_introtext {
-    max-width: 500px;
+    flex: 1;
 }
 
 .home_introtext h1 {
@@ -83,16 +84,24 @@ nav a:hover {
     line-height: 2;
 }
 
+.home_photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 .home_photo img {
-    width: 260px;
-    height: 320px;
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
     border-radius: 45% 45% 20px 20px;
     border: 8px solid #FFF9F2;
 }
 
 /* 各區塊共同 */
 section:not(.home_intro) {
-    padding: 80px;
+    margin: 10px 3%;
+    padding: 10px 25px;
+    border-radius: 35px;
 }
 
 section:not(.home_intro) > h2 {
@@ -104,6 +113,13 @@ section:not(.home_intro) > h2 {
     margin-bottom: 45px;
 }
 
+#about, #skills, #experience, #contact {
+    background-color: #c9c2bb;
+    border: 1px solid #98765B;
+    margin: 80px 3%;
+    padding: 20px 40px;
+}
+
 /* about*/
 #about {
     display: grid;
@@ -111,7 +127,6 @@ section:not(.home_intro) > h2 {
     align-items: start;
     grid-template-columns: 1.2fr 0.8fr;
 }
-
 #about > h2 {
     grid-column: 1/-1;
     margin-top: 10px;
@@ -198,4 +213,51 @@ section:not(.home_intro) > h2 {
     color: #684F3D;
     font-size: 14px;
     margin: 0;
+}
+
+/* skills */
+.skills_content {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 12px;
+}
+
+.skills_item {
+    background-color: #F7F1E8;
+    border: 1px solid #684F3D;
+    border-radius: 20px;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.skills_item img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skills_item h4 {
+    color: #684F3D;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.skills_item p {
+    color: #98765B;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.skills_item progress {
+    width: 75%;
+    height: 20px;
+    accent-color: #98765B;
+    vertical-align: middle;
+}
+
+.skills_item span {
+    color: #98765B;
+    font-size: 13px;
+    margin-left: 8px;
 }
