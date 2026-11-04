@@ -22,7 +22,7 @@ h1, h2, h3 {
     align-items: center;
     padding: 20px;
     background-color: #FFF9F2;
-    border-bottom: #684F3D 1px solid;
+    border-bottom: #E8D8C5 1px solid;
 }
 
 #title > div {
@@ -34,61 +34,75 @@ h1, h2, h3 {
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 nav a {
     font-family: "Cormorant Garamond", serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #514238;
+    font-size: 20px;
+    font-weight: 1000;
+    color: #684F3D;
+    text-decoration: none;
+    background-color: #F5E9DC;
+    padding: 8px 18px;
+    border-radius: 20px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #98765B;
+    background-color: #684F3D;
+    color: #FFF9F2;
 }
 
 
 /* home */
 .home_intro {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
-    padding: 40px 10%;
+    gap: 50px;
+    padding: 55px 15%;
     background-color: transparent;
 }
 
 .home_introtext {
-    flex: 1;
+    flex: 1.2;
+    transform: translateX(-25px);
 }
 
 .home_introtext h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 44px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    color: #514238;
 }
 
 .home_introtext h2 {
-    font-size: 25px;
-    margin-bottom: 5px;
+    font-size: 26px;
+    margin-top: 20px;
+    color: #684F3D;
 }
 
 .home_introtext h4 {
+    color: #684F3D;
     font-size: 16px;
     font-weight: 400;
 }
 
 .home_introtext p {
-    margin-top: 25px;
+    margin-top: 22px;
     line-height: 2;
+    font-size: 16px;
+    color: #684F3D;
+    max-width: 500px;
 }
 
 .home_photo {
-    flex: 1;
+    flex: 0 0 320px;
     display: flex;
     justify-content: center;
 }
+
 .home_photo img {
     width: 300px;
     height: 280px;
@@ -110,13 +124,14 @@ section:not(.home_intro) > h2 {
     font-weight: 600;
     text-align: center;
     color: #684F3D;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
+    margin-top: 0;
 }
 
 #about, #skills, #experience, #contact {
-    background-color: #d3cdc7;
-    border: 1px solid #98765B;
-    margin: 80px 3%;
+    background-color: #F5E9DC;
+    border: 1px solid #E8D8C5;
+    margin: 30px 3% 80px;
     padding: 20px 40px;
 }
 
@@ -145,6 +160,8 @@ section:not(.home_intro) > h2 {
 .about_intro p {
     line-height: 1.9;
     text-align: justify;
+    font-size: 16px;
+    color: #514238;
 }
 
 .traits {
@@ -210,7 +227,7 @@ section:not(.home_intro) > h2 {
 }
 
 .about_text p {
-    color: #684F3D;
+    color: #514238;
     font-size: 14px;
     margin: 0;
 }
@@ -223,7 +240,7 @@ section:not(.home_intro) > h2 {
 }
 
 .skills_item {
-    background-color: #F7F1E8;
+    background-color: #FFF9F2;
     border: 1px solid #684F3D;
     border-radius: 20px;
     padding: 20px 15px;
@@ -304,7 +321,7 @@ section:not(.home_intro) > h2 {
 }
 
 .experience_item p {
-    color: #684F3D;
+    color: #514238;
     font-size: 15px;
     line-height: 1.8;
     text-align: justify;
@@ -349,6 +366,8 @@ section:not(.home_intro) > h2 {
 
 .contact_info li {
     margin-top: 15px;
+    font-size: 16px;
+    color: #514238;
 }
 
 .contact_info a {
