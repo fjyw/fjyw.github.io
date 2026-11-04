@@ -396,3 +396,16 @@ section:not(.home_intro) > h2 {
 .contact_form input[type="submit"]:hover, .contact_form input[type="reset"]:hover {
     background-color: #684F3D;
 }
+
+/* footer */
+footer {
+    background-color: #684F3D;
+    color: #FFF9F2;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 25px;
+}
+
+footer p {
+    font-size: 14px;
+}
