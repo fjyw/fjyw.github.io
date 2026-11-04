@@ -124,27 +124,27 @@ section:not(.home_intro) > h2 {
     font-weight: 600;
     text-align: center;
     color: #684F3D;
-    margin-bottom: 25px;
-    margin-top: 0;
+    margin: 10px 0 25px;
 }
 
 #about, #skills, #experience, #contact {
     background-color: #F5E9DC;
     border: 1px solid #E8D8C5;
-    margin: 30px 3% 80px;
-    padding: 20px 40px;
+    margin: 15px 3% 80px;
+    padding: 10px 40px 35px;
 }
 
 /* about*/
 #about {
     display: grid;
-    gap: 25px 40px;
+    gap: 0 40px;
     align-items: start;
     grid-template-columns: 1.2fr 0.8fr;
 }
+
 #about > h2 {
     grid-column: 1/-1;
-    margin-top: 10px;
+    margin: 10 0 25px;
 }
 
 .about_content {
@@ -167,12 +167,14 @@ section:not(.home_intro) > h2 {
 .traits {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 12px;
     margin-top: 20px;
 }
 
 .traits span {
     background-color: #E8D8C5;
+    color: #684F3D;
     padding: 10px 15px;
     border-radius: 30px;
     font-size: 14px;
@@ -182,16 +184,20 @@ section:not(.home_intro) > h2 {
     grid-column: 2;
     grid-row: 2;
     background-color: #E8D8C5;
-    padding: 12px 25px;
-    align-self: start;
+    padding: 10px 25px 0;
+    align-self: stretch;
     border-radius: 25px;
+
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about_point h3 {
-    color: #514238;
+    color: #684F3D;
     font-size: 22px;
-    margin: 0 0 5px 0;
+    margin: 0;
     text-align: left;
 }
 
@@ -199,7 +205,7 @@ section:not(.home_intro) > h2 {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 5px;
+    padding: 15px 5px;
     border-bottom: 1px solid #684F3D;
 }
 
@@ -266,17 +272,36 @@ section:not(.home_intro) > h2 {
     margin-bottom: 12px;
 }
 
-.skills_item progress {
+.progress_bar {
     width: 75%;
-    height: 20px;
-    accent-color: #98765B;
+    height: 10px;
+    background-color: #E8D8C5;
+    border-radius: 20px;
+    overflow: hidden;
+    display: inline-block;
     vertical-align: middle;
+    margin: 0;
+}
+
+.progress_fill {
+    width: 0;
+    height: 100%;
+    background-color: #98765B;
+    border-radius: 20px;
+    animation: bar 1.5s ease-out forwards;
+}
+
+@keyframes bar {
+    to {
+        width: var(--progress);
+    }
 }
 
 .skills_item span {
     color: #98765B;
     font-size: 13px;
     margin-left: 8px;
+    vertical-align: middle;
 }
 
 /* experience */
@@ -329,28 +354,38 @@ section:not(.home_intro) > h2 {
 }
 
 .experience_item a {
+    display: inline-block;
+    align-self: flex-end;
+    width: fit-content;
     color: #684F3D;
     font-size: 15px;
     text-align: right;
     margin-top: auto;
+    background-color: #F5E9DC;
+    padding: 6px 15px;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
 .experience_item a:hover {
-    color: #684F3D;
-    text-decoration: underline;
+    background-color: #684F3D;
+    color: #FFF9F2;
+    text-decoration: none;
 }
 
 /* contact */
 .contact_content {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 40px;
+    grid-template-columns: 0.6fr 1.2fr;
+    gap: 25px;
     padding: 15px 20px;
 }
 
 .contact_info {
     border-right: 1px solid #98765B;
     padding-right: 30px;
+    width: 85%;
+    box-sizing: border-box;
 }
 
 .contact_info h3, .contact_form h3 {
@@ -365,9 +400,18 @@ section:not(.home_intro) > h2 {
 }
 
 .contact_info li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     margin-top: 15px;
     font-size: 16px;
     color: #514238;
+}
+
+.contact_icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
 }
 
 .contact_info a {
@@ -398,6 +442,7 @@ section:not(.home_intro) > h2 {
     background-color: #FFF9F2;
     font-family: inherit;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .contact_form textarea {
@@ -414,6 +459,29 @@ section:not(.home_intro) > h2 {
 
 .contact_form input[type="submit"]:hover, .contact_form input[type="reset"]:hover {
     background-color: #684F3D;
+}
+
+.form_row {
+    display: flex;
+    gap: 15px;
+}
+
+.form_group {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.form_buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.form_buttons input {
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* footer */
