@@ -17,6 +17,7 @@ h1, h2, h3 {
 
 /* header */
 #title {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +34,7 @@ h1, h2, h3 {
 }
 
 .header_title {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -45,6 +47,7 @@ h1, h2, h3 {
 }
 
 nav {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     gap: 15px;
 }
@@ -58,9 +61,13 @@ nav a {
     background-color: #F5E9DC;
     padding: 8px 18px;
     border-radius: 20px;
+
+    /* [特效] 滑鼠移到導覽列時，背景色和文字顏色0.3秒完成變化-使用transition */
+    /* [參考來源] https://www.w3schools.com/css/css3_transitions_timing.asp*/
     transition: 0.3s;
 }
 
+/* [參考來源] https://www.w3schools.com/cssref/sel_hover.php/css_ref_pseudo_elements.php */
 nav a:hover {
     background-color: #684F3D;
     color: #FFF9F2;
@@ -69,6 +76,7 @@ nav a:hover {
 
 /* home */
 .home_intro {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,6 +119,7 @@ nav a:hover {
 
 .home_photo {
     flex: 0 0 320px;
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     justify-content: center;
 }
@@ -137,12 +146,15 @@ section:not(.home_intro) > h2 {
     text-align: center;
     color: #684F3D;
     margin: 10px 0 25px;
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
 }
 
+/* [特效] 在區塊標題左右兩邊加上裝飾線-使用::before和::after */
+/* [參考來源] https://www.w3schools.com/css/css_pseudo_elements_content.asp */
 section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     content: "";
     flex: 1;
@@ -160,6 +172,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 
 /* about*/
 #about {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_grid.asp */
     display: grid;
     gap: 0 40px;
     align-items: start;
@@ -168,7 +181,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 
 #about > h2 {
     grid-column: 1/-1;
-    margin: 10 0 25px;
+    margin: 10px 0 25px;
 }
 
 .about_content {
@@ -189,6 +202,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 }
 
 .traits {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -202,10 +216,16 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     padding: 10px 15px;
     border-radius: 30px;
     font-size: 14px;
+
+    /* [特效] 讓個人特質標籤上移和陰影變化0.3秒完成-使用transition */
+    /* [參考來源] https://www.w3schools.com/css/css3_transitions.asp、https://www.w3schools.com/css/css3_transitions_timing.asp */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* [參考來源] https://www.w3schools.com/cssref/sel_hover.php/css_ref_pseudo_elements.php */
 .traits span:hover {
+    /* [特效] 滑鼠移到個人特質標籤時，向上移動5px並增加陰影-使用transform: tarnslateY()和box-shadow */
+    /* [參考來源] https://www.w3schools.com/cssref/css3_pr_transform.php */
     transform: translateY(-5px);
     box-shadow: 0 5px 10px #78604D;
 }
@@ -219,6 +239,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     border-radius: 25px;
 
     height: auto;
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -232,6 +253,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 }
 
 .about_item {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     align-items: center;
     gap: 20px;
@@ -240,6 +262,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 }
 
 .about_text {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -270,6 +293,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 
 /* skills */
 .skills_content {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_grid.asp */
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 12px;
@@ -281,11 +305,18 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     border-radius: 20px;
     padding: 20px 15px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3 ease;
+
+    /* [特效] 滑鼠移到技能時，0.3秒完成放大、浮起(上移)並有陰影變化-使用transition */
+    /* [參考來源] https://www.w3schools.com/css/css3_transitions.asp、https://www.w3schools.com/css/css3_transitions_timing.asp*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+/* [參考來源] https://www.w3schools.com/cssref/sel_hover.php/css_ref_pseudo_elements.php */
 .skills_item:hover {
-    transform: translateY(-8px);
+    /* [特效] 滑鼠移到技能時，向上移動8px、放大1.05倍並增加陰影-使用transform: translateY()、scale()，以及box-shadow */
+    /* [參考來源] https://www.w3schools.com/cssref/css3_pr_transform.php */
+    transform: translateY(-8px) scale(1.05);
     box-shadow: 0 8px 15px #78604D;
 }
 
@@ -324,9 +355,14 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     height: 100%;
     background-color: #98765B;
     border-radius: 20px;
+
+    /* [特效] 進度條從0逐漸填充到設定的百分比-使用animation */
+    /* [參考來源] https://www.w3schools.com/css/css3_animations.asp、https://www.w3schools.com/css/css3_animations_timing.asp、https://www.w3schools.com/css/css3_animations_properties.asp */
     animation: bar 1.5s ease-out forwards;
 }
 
+/* [特效] 設定進度條從0%填充到指定百分比-使用@keyframes */
+/* [參考來源] https://www.w3schools.com/css/css3_animations.asp */
 @keyframes bar {
     to {
         width: var(--progress);
@@ -342,6 +378,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 
 /* experience */
 .experience_content {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_grid.asp */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
@@ -352,11 +389,14 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     border: 1px solid #684F3D;
     border-radius: 22px;
     padding: 15px;
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     flex-direction: column;
 }
 
 .experience_item img {
+    /* [特效] 控制圖片上移及陰影變化0.3秒完成-使用transition */
+    /* [參考來源] https://www.w3schools.com/css/css3_transitions.asp、https://www.w3schools.com/css/css3_transitions_timing.asp */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     height: 160px;
@@ -365,8 +405,16 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     margin-bottom: 12px;
 }
 
+/* [參考來源] https://www.w3schools.com/cssref/sel_hover.php/css_ref_pseudo_elements.php */
+.experience_item img:hover {
+    /* [特效] 滑鼠移到經驗圖片時，向上移動8px並增加陰影-使用transform: translateY()和box-shadow */
+    /* [參考來源] https://www.w3schools.com/cssref/css3_pr_transform.php */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px #78604D;
+}
 
 .experience_title {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     align-items: center;
     gap: 6px;
@@ -416,19 +464,17 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     text-decoration: none;
 }
 
+/* [特效] 滑鼠移到查看更多時，改變背景色和文字顏色-使用:hover */
+/* [參考來源] https://www.w3schools.com/cssref/sel_hover.php/css_ref_pseudo_elements.php */
 .experience_item a:hover {
     background-color: #684F3D;
     color: #FFF9F2;
     text-decoration: none;
 }
 
-.experience_item img:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px #78604D;
-}
-
 /* contact */
 .contact_content {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_grid.asp */
     display: grid;
     grid-template-columns: 0.6fr 1.2fr;
     gap: 25px;
@@ -454,6 +500,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 }
 
 .contact_info li {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     align-items: center;
     gap: 12px;
@@ -473,11 +520,14 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     text-decoration: none;
 }
 
+/* [特效] 滑鼠移到聯絡資訊連結時，改變文字顏色-使用:hover */
+/* [參考來源] https://www.w3schools.com/cssref/sel_hover.php/css_ref_pseudo_elements.php */
 .contact_info a:hover {
     color: #98765B;
 }
 
 .contact_form form {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -511,23 +561,28 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     margin-top: 8px;
 }
 
+/* [特效] 滑鼠移到重設和提交時，改變背景色-使用:hover */
+/* [參考來源] https://www.w3schools.com/cssref/sel_hover.php/css_ref_pseudo_elements.php */
 .contact_form input[type="submit"]:hover, .contact_form input[type="reset"]:hover {
     background-color: #684F3D;
 }
 
 .form_row {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     gap: 15px;
 }
 
 .form_group {
     flex: 1 1 0;
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     flex-direction: column;
     min-width: 0;
 }
 
 .form_buttons {
+    /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
     gap: 15px;
 }
