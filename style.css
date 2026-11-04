@@ -32,6 +32,18 @@ h1, h2, h3 {
     color: #684F3D;
 }
 
+.header_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_title img {
+    width: 30px;
+    height: 50px;
+    object-fit: contain;
+}
+
 nav {
     display: flex;
     gap: 15px;
@@ -125,6 +137,18 @@ section:not(.home_intro) > h2 {
     text-align: center;
     color: #684F3D;
     margin: 10px 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
+    content: "";
+    flex: 1;
+    max-width: 180px;
+    height: 1px;
+    background-color: #C6A98B;
 }
 
 #about, #skills, #experience, #contact {
@@ -178,6 +202,12 @@ section:not(.home_intro) > h2 {
     padding: 10px 15px;
     border-radius: 30px;
     font-size: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.traits span:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px #78604D;
 }
 
 .about_point {
@@ -251,6 +281,12 @@ section:not(.home_intro) > h2 {
     border-radius: 20px;
     padding: 20px 15px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.skills_item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px #78604D;
 }
 
 .skills_item img {
@@ -321,6 +357,7 @@ section:not(.home_intro) > h2 {
 }
 
 .experience_item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     height: 160px;
     object-fit: cover;
@@ -328,21 +365,33 @@ section:not(.home_intro) > h2 {
     margin-bottom: 12px;
 }
 
+
+.experience_title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.experience_title h3 {
+    white-space: nowrap;
+}
+
 .experience_item span {
     display: inline-block;
     align-self: flex-end;
     background-color: #F7F1E8;
     color: #684F3D;
-    padding: 6px 15px;
+    padding: 5px 12px;
     border-radius: 20px;
     font-size: 15px;
-    margin-bottom: 10px;
+    flex-shrink: 0;
 }
 
 .experience_item h3 {
     color: #514238;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 .experience_item p {
@@ -371,6 +420,11 @@ section:not(.home_intro) > h2 {
     background-color: #684F3D;
     color: #FFF9F2;
     text-decoration: none;
+}
+
+.experience_item img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px #78604D;
 }
 
 /* contact */
@@ -486,10 +540,10 @@ section:not(.home_intro) > h2 {
 
 /* footer */
 footer {
-    background-color: #684F3D;
+    background-color: #78604D;
     color: #FFF9F2;
     text-align: center;
-    padding: 35px 20px;
+    padding: 25px 20px;
     margin-top: 25px;
 }
 
