@@ -55,6 +55,8 @@
                 <span>善解人意</span>
                 <span>和藹可親</span>
                 <span>克盡職守</span>
+                <span>敦厚和善</span>
+                <span>真誠懇切</span>
             </div>
         </div>
 
@@ -95,15 +97,20 @@
                 <img src="image/communication.png" alt="communication">
                 <h4>溝通表達</h4>
                 <p>與人協調及溝通</p>
-                <progress value="90" max="100"></progress>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="--progress: 90%;"></div>
+                </div>
                 <span>90%</span>
+                
             </article>
 
             <article class="skills_item">
                 <img src="image/programming.png" alt="programming">
                 <h4>程式設計</h4>
                 <p>Java、Python、HTML、CSS</p>
-                <progress value="70" max="100"></progress>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="--progress: 70%;"></div>
+                </div>
                 <span>70%</span>
             </article>
 
@@ -111,7 +118,9 @@
                 <img src="image/word_processing.png" alt="word_processing">
                 <h4>文書處理</h4>
                 <p>Word、PPT、Excel</p>
-                <progress value="80" max="100"></progress>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="--progress: 80%;"></div>
+                </div>
                 <span>80%</span>
             </article>
 
@@ -119,7 +128,9 @@
                 <img src="image/design.png" alt="design">
                 <h4>視覺設計</h4>
                 <p>Canva</p>
-                <progress value="75" max="100"></progress>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="--progress: 75%;"></div>
+                </div>
                 <span>75%</span>
             </article>
 
@@ -127,7 +138,9 @@
                 <img src="image/cooperation.png" alt="cooperation">
                 <h4>團隊合作</h4>
                 <p>參與團隊共同完成任務</p>
-                <progress value="80" max="100"></progress>
+                <div class="progress_bar">
+                    <div class="progress_fill" style="--progress: 80%;"></div>
+                </div>
                 <span>80%</span>
             </article>
         </div>
@@ -173,14 +186,17 @@
 
                 <ul>
                     <li>
+                        <img src="" alt="email" class="contact_icon">
                         <a href="mailto:fjyw0308@gmail.com">fjyw0308@gmail.com</a>
                     </li>
 
                     <li>
+                        <img src="" alt="ig" class="contact_icon">
                         <a href="">_wen_0308_</a>
                     </li>
 
                     <li>
+                        <img src="" alt="fb" class="contact_icon">
                         <a href="">范姜郁雯</a>
                     </li>
                 </ul>
@@ -190,17 +206,25 @@
                 <h3>Send Me a Message</h3>
 
                 <form action="" method="post">
-                    <label>姓名</label>
-                    <input type="text" name="your_name">
+                    <div class="form_row">
+                        <div class="form_group">
+                            <label>姓名</label>
+                            <input type="text" name="your_name">
+                        </div>
 
-                    <label>Email</label>
-                    <input type="email" name="your_email">
+                        <div class="form_group">
+                            <label>Email</label>
+                            <input type="email" name="your_email">
+                        </div>
+                    </div>
 
                     <label>留言內容</label>
                     <textarea name="message" rows="4" cols="20"></textarea>
 
-                    <input type="submit" value="送出">
-                    <input type="reset" value="重設">
+                    <div class="form_buttons">
+                        <input type="reset" value="重設">
+                        <input type="submit" value="送出">
+                    </div>
                 </form>
             </div>
         </div>
