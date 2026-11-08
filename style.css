@@ -526,6 +526,14 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     color: #98765B;
 }
 
+.contact_form h3 img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 .contact_form form {
     /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_flexbox.asp */
     display: flex;
@@ -591,6 +599,24 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     flex: 1;
     width: 100%;
     box-sizing: border-box;
+}
+
+/* background_music */
+.background_music {
+    text-align: center;
+    margin: -45px 0 35px;
+}
+
+.background_music p {
+    color: #684F3D;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.background_music audio {
+    width: 250px;
+    height: 40px;
 }
 
 /* footer */
@@ -671,8 +697,14 @@ footer p {
 .evidence_item img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.evidence_item img:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 15px #78604D;
 }
 
 .evidence_item video {
@@ -723,4 +755,268 @@ footer p {
 
 .back_home a {
     display: inline-block;
+}
+
+
+/* 桌機RWD */
+@media screen and (min-width: 1440px) {
+    .home_intro {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #about, #skills, #experience, #contact {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+
+    .about_content {
+        grid-column: 1;
+        max-width: 80%;
+        margin-left: 100px;
+    }
+
+    .about_point {
+        grid-column: 2;
+        grid-row: 2;
+        max-width: 80%;
+    }
+
+    .about_content, .about_point {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .skills_content {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .experience_content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact_content {
+        grid-template-columns: 0.6fr 1.8fr;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .evidence_content {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .evidence_box {
+        max-width: 1250px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .relative_link {
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* 手機板RWD */
+@media screen and (max-width: 768px) {
+    #title {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .home_intro {
+        flex-direction: column;
+        gap: 25px;
+        padding: 35px 5%;
+    }
+
+    .home_introtext {
+        transform: none;
+        text-align: center;
+    }
+
+    .home_introtext h1 {
+        font-size: 34px;
+    }
+
+    .home_introtext p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home_photo {
+        flex: none;
+    }
+
+    section:not(.home_intro) {
+        margin: 15px 3%;
+        padding: 10px 15px 25px;
+    }
+
+    #about, #skills, #experience, #contact {
+        padding: 10px 15px 25px;
+        margin-bottom: 40px;
+    }
+
+    section:not(.home_intro) > h2 {
+        font-size: 30px;
+        gap: 12px;
+    }
+
+    #about {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about_content, .about_point {
+        grid-column: 1;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .about_point {
+        grid-row: auto;
+    }
+
+    .skills_content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience_content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        gap: 20px;
+    }
+
+    #experience .experience_item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .experience_title h3 {
+        white-space: normal;
+    }
+
+    .contact_content {
+        grid-template-columns: 1fr;
+        padding: 10px 5px;
+    }
+
+    .contact_info {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #98765B;
+        padding: 0 0 20px;
+    }
+
+    .form_row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .background_music {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    #evidence_page {
+        margin: 25px 3%;
+    }
+
+    #evidence_page > h1 {
+        font-size: 32px;
+    }
+
+    .evidence_intro {
+        font-size: 15px;
+        margin: 15px auto 25px;
+    }
+
+    .evidence_box {
+        padding: 20px 15px;
+    }
+
+    #evidence_page > h2 {
+        font-size: 25px;
+    }
+
+    .evidence_content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .evidence_item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .evidence_item:last-child:nth-child(odd) {
+        grid-column: auto;
+    }
+
+    .evidence_item img {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    .evidence_item video {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    .relative_link {
+        padding: 20px 15px;
+        margin-top: 20px;
+    }
+
+    .relative_link a {
+        display: inline-block;
+        margin: 8px 0;
+    }
+
+    .relative_link h2 {
+        font-size: 24px;
+    }
+
+    .relative_link p {
+        font-size: 14px;
+    }
+
+    .back_home {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .back_home a {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
 }
