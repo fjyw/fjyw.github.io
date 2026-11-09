@@ -155,7 +155,6 @@ section:not(.home_intro) > h2 {
     gap: 25px;
 }
 
-/* [特效] 在區塊標題左右兩邊加上裝飾線-使用::before和::after */
 /* [參考來源] https://www.w3schools.com/css/css_pseudo_elements_content.asp */
 section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     content: "";
@@ -643,7 +642,7 @@ footer p {
     font-size: 14px;
 }
 
-/* usr佐證資料網頁 */
+/* 佐證資料網頁(查看更多) */
 #evidence_page {
     margin: 45px 5%;
 }
@@ -779,8 +778,7 @@ footer p {
     display: inline-block;
 }
 
-
-/* 桌機RWD */
+/* 桌機RWD
 @media screen and (min-width: 1440px) {
     .home_intro {
         flex-direction: row;
@@ -797,7 +795,7 @@ footer p {
     }
 
     #about {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: 1.2fr 0.8fr;
     }
 
@@ -819,24 +817,24 @@ footer p {
     }
 
     .skills_content {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: repeat(5, 1fr);
     }
 
     .experience_content {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: repeat(3, 1fr);
     }
 
     .contact_content {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: 0.6fr 1.8fr;
         margin-left: 30px;
         margin-right: 30px;
     }
 
     .evidence_content {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: repeat(2, 1fr);
         max-width: 1000px;
         margin: 0 auto;
@@ -854,9 +852,10 @@ footer p {
         margin-left: auto;
         margin-right: auto;
     }
-}
+} */
 
-/* 手機板RWD */
+
+/* 手機RWD
 @media screen and (max-width: 768px) {
     #title {
         flex-direction: column;
@@ -914,7 +913,7 @@ footer p {
     }
 
     #about {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -930,13 +929,13 @@ footer p {
     }
 
     .skills_content {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: repeat(2, 1fr);
     }
 
     .experience_content {
         display: grid;
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: minmax(0, 1fr);
         width: 100%;
         gap: 20px;
@@ -952,7 +951,7 @@ footer p {
     }
 
     .contact_content {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: 1fr;
         padding: 10px 5px;
     }
@@ -996,7 +995,7 @@ footer p {
     }
 
     .evidence_content {
-        /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+        [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php
         grid-template-columns: 1fr;
         gap: 15px;
     }
@@ -1015,7 +1014,7 @@ footer p {
         width: 100%;
         height: auto;
         max-height: 350px;
-        /* [參考來源] https://www.w3schools.com/css/css3_object-fit.asp */
+        [參考來源] https://www.w3schools.com/css/css3_object-fit.asp
         object-fit: contain;
     }
 
@@ -1052,4 +1051,4 @@ footer p {
         font-size: 14px;
         padding: 8px 18px;
     }
-}
+} */
