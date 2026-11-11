@@ -82,12 +82,12 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    padding: 55px 15%;
+    padding: 55px 16%;
     background-color: transparent;
 }
 
 .home_introtext {
-    flex: 1.2;
+    flex: 0 1 700px;
     transform: translateX(-25px);
 }
 
@@ -199,7 +199,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 
 .about_content {
     grid-column: 1;
-    max-width: 750px;
+    max-width: 800px;
     width: 100%;
     justify-self: end;
 }
@@ -250,7 +250,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 .about_point {
     grid-column: 2;
     grid-row: 2;
-    max-width: 365px;
+    max-width: clamp(365px,25vw, 430px);
     width: 100%;
     justify-self: start;
     background-color: #E8D8C5;
