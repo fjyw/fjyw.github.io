@@ -127,7 +127,7 @@ nav a:hover {
 
 .home_photo img {
     width: 300px;
-    height: 280px;
+    height: 300px;
     /* [參考來源] https://www.w3schools.com/css/css3_object-fit.asp */
     object-fit: cover;
     border-radius: 45% 45% 20px 20px;
@@ -201,6 +201,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     text-align: justify;
     font-size: 16px;
     color: #514238;
+    margin-left: 35px;
 }
 
 .traits {
@@ -292,6 +293,10 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     color: #514238;
     font-size: 14px;
     margin: 0;
+}
+
+.about_icon, .about_point h3, .about_point {
+    margin-left: 15px;
 }
 
 /* skills */
