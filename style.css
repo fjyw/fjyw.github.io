@@ -132,6 +132,17 @@ nav a:hover {
     object-fit: cover;
     border-radius: 45% 45% 20px 20px;
     border: 8px solid #FFF9F2;
+
+    /* [特效] 控制圖片上移及陰影變化0.3秒完成-使用transition */
+    /* [參考來源] https://www.w3schools.com/css/css3_transitions.asp、https://www.w3schools.com/css/css3_transitions_timing.asp */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home_photo img:hover {
+    /* [特效] 滑鼠移到個人照片時，向上移動5px、增加陰影並放大1.03倍-使用transform: tarnslateY()、scale()和box-shadow */
+    /* [參考來源] https://www.w3schools.com/cssref/css3_pr_transform.php */
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 5px 10px #78604D;
 }
 
 /* 各區塊共同 */
