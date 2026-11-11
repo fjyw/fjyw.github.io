@@ -520,6 +520,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     margin-top: 15px;
     font-size: 16px;
     color: #514238;
+    line-height: 2.3;
 }
 
 .contact_icon {
