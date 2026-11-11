@@ -186,7 +186,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 #about {
     /* [參考來源] https://www.w3schools.com/htmlcss/htmlcss_layout_grid.asp */
     display: grid;
-    gap: 0 40px;
+    gap: 0 clamp(35px, 5vw, 90px);
     align-items: start;
     /* [參考來源] https://www.w3schools.com/cssref/pr_grid-template-columns.php */
     grid-template-columns: 1.2fr 0.8fr;
@@ -199,6 +199,9 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 
 .about_content {
     grid-column: 1;
+    max-width: 750px;
+    width: 100%;
+    justify-self: end;
 }
 
 .about_intro {
@@ -212,7 +215,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     text-align: justify;
     font-size: 16px;
     color: #514238;
-    margin-left: 35px;
+    margin-left: 25px;
 }
 
 .traits {
@@ -247,6 +250,9 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
 .about_point {
     grid-column: 2;
     grid-row: 2;
+    max-width: 365px;
+    width: 100%;
+    justify-self: start;
     background-color: #E8D8C5;
     padding: 10px 25px 0;
     align-self: stretch;
@@ -306,7 +312,7 @@ section:not(.home_intro) > h2::before, section:not(.home_intro) > h2::after {
     margin: 0;
 }
 
-.about_icon, .about_point h3, .about_point {
+.about_icon, .about_point h3 {
     margin-left: 15px;
 }
 
